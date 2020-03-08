@@ -29,7 +29,6 @@
 		},
 		methods:{
 			voting(isGood, id){
-				debugger
 				const person = this.people.filter( item => item.id === id)[0];
 				if(isGood){
 					person.upVotes++;

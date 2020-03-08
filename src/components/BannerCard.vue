@@ -1,15 +1,22 @@
 <template>
-    <div class="banner-card">
-        <span>What's your opinion on</span>
-        <h2>Pope Francis</h2>
-        <p>He’s talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up) </p>
-        <img src="~@/assets/wiki-logo.png" alt="wikipedia-logo" />
-        <div class="vote-area">
-            <span class="title">What's your veredict</span>
-            <button class="btn btn--upvote btn--big"><img src="~@/assets/thumbs-up.svg" alt="upvote"></button>
-            <button class="btn btn--downvote btn--big"><img src="~@/assets/thumbs-down.svg" alt="downvote"></button>
-        </div>
-    </div>
+	<div class="banner-card">
+		<div class="banner-card__info-area">
+			<h2>
+				<span>What's your opinion on</span>
+				Pope Francis?
+			</h2>
+			<p>He’s talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up) </p>
+			<a href="">
+				<img src="~@/assets/wiki-logo.png" alt="wikipedia-logo" /> 
+				<span>More information</span>
+			</a>
+			<span class="title">What's your veredict</span>
+		</div>
+		<div class="banner-card__vote-area">
+			<button class="btn btn--upvote"><img src="~@/assets/thumbs-up.svg" alt="upvote"></button>
+			<button class="btn btn--downvote"><img src="~@/assets/thumbs-down.svg" alt="downvote"></button>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -19,5 +26,70 @@
 </script>
 
 <style lang="scss" scoped>
-
+	.banner-card{
+		color:#FFF;
+		position:absolute;
+		top:20vh;
+		&__info-area{
+			background-color: rgba(0,0,0,0.5);
+			backdrop-filter: blur(30px); // esto nada mas funciona en chrome ... I know, but wth
+			height:300px;
+			padding:40px 30px 30px 30px;
+			width:440px;
+			p{
+				font-size: 20px;
+				font-weight: 300;
+				line-height: 20px;
+				margin-bottom:25px;
+				width:85%;
+			}
+			a {
+				color:#FFF;
+				display: block;
+				margin-bottom: 50px;
+				& > span{
+					font-size: 14px;
+					font-weight: 300;
+				}
+				img{
+					vertical-align: middle;
+					margin-right:5px;
+				}
+			}
+			span{
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+		&__vote-area{
+			display:flex;
+			flex-flow: row;
+			width:100%;
+			.btn{
+				flex:1;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				opacity:0.8;
+				height:80px;
+				&--upvote{
+					background-color: #1CBBB4;
+				}
+				&--downvote{
+					background-color: #FFAD1D;
+				}
+			}
+		}
+		h2{
+			color:#FFF;
+			font-size:60px;
+			margin-bottom:30px;
+			margin-top:0;
+			span{
+				display:block;
+				font-size: 16px;
+				font-weight: 300;
+			}
+		}
+	}
 </style>

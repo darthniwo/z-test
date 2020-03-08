@@ -1,8 +1,8 @@
 <template>
-	<div class="['message-banner'. {'hidden': !isOpen}]">
+	<div :class="['message-banner', {'hidden': !isOpen}]">
 		<div class="main-msg">
 			<span>Speak out. Be heard</span>
-			<b>Be</b>
+			<b>Be counted</b>
 		</div>
 		<p>
 			Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report.
@@ -27,5 +27,30 @@
 </script>
 
 <style lang="scss" scoped>
-
+	.message-banner{
+		background-color: #EBEBEB;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		padding:20px;
+		margin:40px 0px;
+		p{
+			font-size: 15px;
+		}
+	}
+	.main-msg{
+		width:215px;
+		text-align: justify;
+		margin-right:20px;
+		span{
+			font-size: 16px;
+			font-weight: 300;
+		}
+		b{
+			display:block;
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: 1px;
+		}
+	}
 </style>

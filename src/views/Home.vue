@@ -4,6 +4,7 @@
     <main-banner></main-banner>
     <div class="wrapper">
       <message-banner />
+      <h2>Votes</h2>
       <card-feed />
     </div>
   </div>
@@ -28,5 +29,10 @@ export default {
 }
 </script>
 <style lang="scss">
-
+  h2{
+			color:#333333;
+			font-size: 40px;
+			font-weight: 300;
+      margin:40px 0;
+		}
 </style>
