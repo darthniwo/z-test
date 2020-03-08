@@ -57,9 +57,9 @@ button{
   margin: 0 auto;
   max-width:1024px;
   position:relative;
-  // @media screen and (min-width: 800px) {
-  //   max-width:1280px;
-  // }
+  @media screen and (max-width: 800px) {
+    max-width:100%;;
+  }
 }
 .hidden{
   display:none !important;
@@ -74,6 +74,11 @@ button{
   transition: ease-in .3s all;
   &:hover{
     outline: 1px solid transparent;
+  }
+  &--dark{
+    color:#000;
+    border:1px solid #000;
+    outline: 1px solid #000;
   }
 }
 </style>

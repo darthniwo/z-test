@@ -34,14 +34,25 @@
 		justify-content: center;
 		padding:20px;
 		margin:40px 0px;
+		@media screen and (max-width:600px){
+			flex-direction: column;
+		}
 		p{
 			font-size: 15px;
+			margin-bottom:10px;
+			@media screen and (max-height:450px){
+				width:90%;
+			}
 		}
 	}
 	.main-msg{
 		width:215px;
 		text-align: justify;
 		margin-right:20px;
+		@media screen and (max-width:600px){
+			text-align: center;
+			margin-bottom:15px;
+		}
 		span{
 			font-size: 16px;
 			font-weight: 300;

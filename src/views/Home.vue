@@ -1,11 +1,13 @@
 <template>
   <div class="home">
-    <main-header></main-header>
-    <main-banner></main-banner>
+    <main-header />
+    <main-banner />
     <div class="wrapper">
       <message-banner />
       <h2>Votes</h2>
       <card-feed />
+      <lower-banner />
+      <main-footer />
     </div>
   </div>
 </template>
@@ -17,6 +19,8 @@ import MainHeader from '@/components/MainHeader';
 import MainBanner from '@/components/MainBanner';
 import MessageBanner from '@/components/MessageBanner';
 import CardFeed from '@/components/CardFeed';
+import LowerBanner from '@/components/LowerBanner';
+import MainFooter from '@/components/MainFooter';
 
 export default {
   name: 'Home',
@@ -24,7 +28,9 @@ export default {
     MainHeader,
     MainBanner,
     MessageBanner,
-    CardFeed
+    CardFeed,
+    LowerBanner,
+    MainFooter
   }
 }
 </script>

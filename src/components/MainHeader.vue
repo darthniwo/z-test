@@ -29,8 +29,6 @@
 				handleScroll () {
 					const scrolled = window.pageYOffset;
 					this.transparent = scrolled > 99 ? false : true;
-					console.log('scrolled', scrolled)
-
 				}
 			}
     }
@@ -50,6 +48,9 @@
 	&.bg{
 		height:60px;
 		background: rgba(255,255,255,0.8);
+		@media screen and (max-width:600px){
+			height:100px;
+		}
 		a{
 			color:#555;
 			&:hover{border-color: #555;}
@@ -68,10 +69,19 @@
 		font-size: 32px;
 		text-shadow:rgba(0,0,0,0.3) 0px 1px 5px;
 		margin-top:25px;
+		@media screen and (max-width:600px){
+			float:none;
+			text-align: center;
+		}
+
 	}
 	nav{
 		float:right;
 		margin-top:25px;
+		@media screen and (max-width:600px){
+			float:none;
+			text-align: center;
+		}
 		img{
 			height:25px;
 			width:25px;

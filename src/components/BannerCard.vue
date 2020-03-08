@@ -30,18 +30,36 @@
 		color:#FFF;
 		position:absolute;
 		top:20vh;
+		@media screen and (max-width:850px){
+			width:440px;
+		}
+		@media screen and (max-width: 450px){
+			top:60vh;
+			width:100%;
+		}
+		@media screen and (max-height:450px){
+			width:440px;
+		}
 		&__info-area{
 			background-color: rgba(0,0,0,0.5);
 			backdrop-filter: blur(30px); // esto nada mas funciona en chrome ... I know, but wth
 			height:300px;
 			padding:40px 30px 30px 30px;
 			width:440px;
+			@media screen and (max-width: 850px){
+				height: 120px;
+				width:90%;
+				padding: 5%;
+			}
 			p{
 				font-size: 20px;
 				font-weight: 300;
 				line-height: 20px;
 				margin-bottom:25px;
 				width:85%;
+				@media screen and (max-width: 850px){
+					display:none;
+				}
 			}
 			a {
 				color:#FFF;
@@ -54,6 +72,9 @@
 				img{
 					vertical-align: middle;
 					margin-right:5px;
+				}
+				@media screen and (max-width: 850px){
+					display:none;
 				}
 			}
 			span{
@@ -85,6 +106,10 @@
 			font-size:60px;
 			margin-bottom:30px;
 			margin-top:0;
+			@media screen and (max-width: 850px){
+				font-size: 40px;
+				margin-bottom:20px;
+			}
 			span{
 				display:block;
 				font-size: 16px;

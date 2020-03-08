@@ -71,9 +71,6 @@ import moment from 'moment';
 			this.percentage = getVotePercentage(this.info.upVotes, this.info.downVotes);
 		},
 		methods:{
-			init(){
-				
-			},
 			getImg(name){
 				const url = name.split(' ')[0].toLowerCase();
 				return `/img/${url}.png`;
@@ -114,6 +111,11 @@ import moment from 'moment';
 	position:relative;
 	height:550px;
 	width:490px;
+	@media screen and (max-width: 850px){
+		margin:0px 0px 40px 0px;
+		width:100%;
+		overflow: hidden;
+	}
 	&__info{
 		color: #FFF;
 		position: absolute;
@@ -233,6 +235,9 @@ import moment from 'moment';
 		width: auto;
 		height: auto;
 		z-index:-1;
+		@media screen and (max-width: 800px){
+				width:100%;
+		}
 	}
 	.pic-overlay{
 		background: rgb(0,0,0);
@@ -252,4 +257,9 @@ import moment from 'moment';
 		}
 	}
 }
+// @media (max-width:800){
+// 	.person-card {
+// 		margin:0px 0px 40px 0px;
+// 	}
+// }
 </style>

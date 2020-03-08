@@ -52,5 +52,10 @@
 		& > div:nth-child(even) .person-card{
 			margin:0px 0px 40px 0px;
 		}
+		& > div{
+			@media screen and (max-width: 800px){
+				width:100%;
+			}
+		}
 	}
 </style>
