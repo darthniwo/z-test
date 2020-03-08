@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
+  <div class="past-trials">
     <main-header />
     <main-banner />
     <div class="wrapper">
       <message-banner />
-      <h2>Votes</h2>
+      <h2>Previuos Votes</h2>
       <card-feed />
       <lower-banner />
       <main-footer />
@@ -22,7 +22,7 @@ import LowerBanner from '@/components/LowerBanner';
 import MainFooter from '@/components/MainFooter';
 
 export default {
-  name: 'Home',
+  name: 'Past Trials',
   components: {
     MainHeader,
     MainBanner,

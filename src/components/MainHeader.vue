@@ -1,7 +1,9 @@
 <template>
   <div :class="['main-header', {'bg': !transparent}]">
 		<div class="wrapper">
-			<h1>Rule of Thumb.</h1>
+			<h1>
+				<router-link to="/">Rule of Thumb.</router-link>
+			</h1>
 			<nav>
 				<router-link to="/past-trials">Past Trials</router-link>
 				<router-link to="/how">How It Works</router-link>
@@ -65,10 +67,21 @@
 	}
 	h1{
 		float: left;
-		color:#FFF;
-		font-size: 32px;
+		
 		text-shadow:rgba(0,0,0,0.3) 0px 1px 5px;
 		margin-top:25px;
+		a{
+			color:#FFF;
+			font-size: 32px;
+			text-decoration: none;
+			border: 0 none;
+			&:hover{
+				border-bottom: 0 none;
+			}
+			&.router-link-exact-active{
+				border:0 none;
+			}
+		}
 		@media screen and (max-width:600px){
 			float:none;
 			text-align: center;
@@ -95,6 +108,9 @@
 		text-decoration: none;
 		&:hover{
 			border-bottom: 1px solid #FFF;
+		}
+		&.router-link-exact-active{
+			border-bottom: 3px solid #FFF;
 		}
 	}
 }
