@@ -26,7 +26,7 @@
 						<input :id="info.id + 'downvote'" type="radio" :name="info.name" v-model="voteValue" value="bad">
 						<img src="~@/assets/thumbs-down.svg" alt="downvote">
 					</label>
-					<button class="main-btn" @click="doVote">Vote Now</button>
+					<button :id="info.id+'_vote-btn'" class="main-btn" @click="doVote">Vote Now</button>
 					<span v-if="isMessageOn">You need to choose one!</span>
 				</div>
 			</div>

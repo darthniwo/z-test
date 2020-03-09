@@ -2,20 +2,41 @@
 // https://nightwatchjs.org/guide
 
 module.exports = {
-  'default e2e tests': browser => {
+  '@tags': ['Home page tests'],
+  'Navigation test': browser => {
     browser
       .init()
       .waitForElementVisible('#app')
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      .assert.elementCount('img', 1)
+      .assert.elementPresent('.main-header nav')
+      .assert.elementPresent('a[href^="/past-trials"]')
+      .click('a[href^="/past-trials"]')
+      .waitForElementVisible('.past-trials')
+      .pause(1000)
+      .assert.elementPresent('a[href^="/how"]')
+      .click('a[href^="/how"]')
+      .waitForElementVisible('.how')
+      .pause(1000)
+      .assert.elementPresent('a[href^="/login"]')
+      .click('a[href^="/login"]')
+      .waitForElementVisible('.login')
+      .pause(1000)
       .end();
   },
-
-  'example e2e test using a custom command': browser => {
+  'Vote e2e': browser => {
     browser
-      .openHomepage()
-      .assert.elementPresent('.hello')
+      .init()
+      .waitForElementVisible('#app')
+      .assert.elementPresent('.main-banner')
+      .assert.elementPresent('.banner-card')
+      .assert.containsText('.banner-card', 'Pope Francis')
+      .moveToElement('.card-feed', 10, 10)
+      .waitForElementVisible('.card-feed div:first-child .person-card')
+      .pause(1000)
+      .click('#p1upvote')
+      .pause(500)
+      .click('#p1_vote-btn')
+      .waitForElementVisible('.reset-vote')
+      .pause(1000)
       .end();
-  }
+  },
 };
